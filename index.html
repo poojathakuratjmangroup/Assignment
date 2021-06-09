@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="reg.css" type="text/css">
+    <script src="reg.js"></script>
+    <title>
+        Registration Form
+    </title>
+</head>
+
+<body>
+    <center>
+        <div id="regform">
+            <h1>Registration Form</h1>
+            <form name="regform" action="">
+                <table>
+                    <form name="myform">
+                        <tr>
+                            <td><label for="fname">First Name</label></td>
+                            <td><input type="text" id="fname" name="fname" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name</label></td>
+                            <td><input type="text" id="lname" name="lname" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="emailid">Email ID</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <lable for="mnum">Mobile Number</lable>
+                            </td>
+                            <td><input type="tel" id="mnum" name="mnum" maxlength="10" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <lable for="dob">Date Of Birth</lable>
+                            </td>
+                            <td>
+                                <input type="date" id="dob" name="dob" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label fro="gender">Gender</label></td>
+                            <td><select name="gender" id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="othe">Other</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="submit" id="submit" value="Submit" onclick="ValidateEmail();ValidateMobilenum();ValidAge();store();">
+                                <input type="button" name="Showdata" if="showdata" value="Show Data" onclick="showdata();">
+                            </td>
+                            <td> <input type="button" name="reset" id="reset" value="Reset" onclick="ClearForm()">
+                                <input type="button" name="Clearall" id="clearall" value="Clear All" onclick="clearAll();">
+                            </td>
+                        </tr>
+
+                </table>
+                </form>
+        </div>
+        <div id="showdata">
+        </div>
+    </center>
+</body>
+
+</html>
